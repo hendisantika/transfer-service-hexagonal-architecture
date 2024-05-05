@@ -2,6 +2,7 @@ package id.my.hendisantika.transferservicehexagonalarchitecture.adapter.rest;
 
 import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.rest.dto.DepositDto;
 import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping(path = "/v1/transfer-service", produces = MediaType.APPLICATION_JSON_VALUE)
+@Tag(name = "Deposit", description = "Deposit API")
 @AllArgsConstructor
 public class DepositController {
 

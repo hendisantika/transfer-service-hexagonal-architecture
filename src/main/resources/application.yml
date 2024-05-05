@@ -34,3 +34,11 @@ management:
       base-path: "/"
       path-mapping:
         prometheus: "metrics"
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /v3/api-docs
+application-description: '@project.description@'
+application-version: '@project.version@'
