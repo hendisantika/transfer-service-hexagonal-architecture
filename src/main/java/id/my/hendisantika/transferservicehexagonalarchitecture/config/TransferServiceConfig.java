@@ -38,4 +38,9 @@ public class TransferServiceConfig {
     DepositRepository depositTransferRepository(DepositDataJdbc depositTransferDataJdbc) {
         return new PostgresDepositRepository(depositTransferDataJdbc);
     }
+
+    @Bean
+    public CustomerRepository customerRepository(CustomerDataJdbc customerDataJdbc) {
+        return new PostgresCustomerRepository(customerDataJdbc);
+    }
 }
