@@ -1,6 +1,8 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.core;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,5 +16,11 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Transactional
+@RequiredArgsConstructor
 public class CustomerService {
+    private final CustomerRepository repository;
+
+    public void validateCustomer(long id) {
+        repository.validateCustomer(id);
+    }
 }
