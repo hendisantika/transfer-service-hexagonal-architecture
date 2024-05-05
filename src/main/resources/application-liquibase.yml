@@ -1,0 +1,8 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog-master.xml
+    user: ${POSTGRES_USER:yuji}
+    password: ${POSTGRES_PASSWORD:S3cret}
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5433/transfer_service?prepareThreshold=0}
+    contexts: ${LIQUIBASE_CONTEXT:}
