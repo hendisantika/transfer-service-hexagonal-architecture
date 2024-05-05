@@ -2,6 +2,7 @@ package id.my.hendisantika.transferservicehexagonalarchitecture.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -21,4 +22,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableConfigurationProperties()
 @Slf4j
 public class TransferServiceConfig {
+    // Service Beans
+    @Bean
+    public DepositService depositService(DepositRepository depositTransferRepository, CustomerService endUserService) {
+        return new DefaultDepositService(depositTransferRepository, endUserService);
+    }
 }
