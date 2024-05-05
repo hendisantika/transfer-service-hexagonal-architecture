@@ -1,5 +1,6 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.adapter.rest;
 
+import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.rest.dto.DepositDto;
 import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositService;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -32,7 +33,7 @@ public class DepositController {
     private final DepositService depositService;
 
     @PostMapping(path = "/deposit", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> add(@RequestBody DepositDto dto) {
+    public ResponseEntity<String> addDeposit(@RequestBody DepositDto dto) {
         depositService.add(dto.toDomain());
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(dto.requestUid());
