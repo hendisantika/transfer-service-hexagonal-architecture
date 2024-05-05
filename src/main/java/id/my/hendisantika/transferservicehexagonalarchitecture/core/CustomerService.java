@@ -1,5 +1,6 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.core;
 
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.transaction.annotation.Transactional;

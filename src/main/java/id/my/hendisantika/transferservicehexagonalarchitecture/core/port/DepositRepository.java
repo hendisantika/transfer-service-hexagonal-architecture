@@ -1,5 +1,7 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.core.port;
 
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.model.Deposit;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : transfer-service-hexagonal-architecture

@@ -3,6 +3,8 @@ package id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.excep
 import id.my.hendisantika.transferservicehexagonalarchitecture.core.model.ErrorCode;
 import id.my.hendisantika.transferservicehexagonalarchitecture.core.model.exception.TransferServiceException;
 
+import static id.my.hendisantika.transferservicehexagonalarchitecture.core.model.ErrorCode.DATABASE_INTERNAL_ERROR;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : transfer-service-hexagonal-architecture

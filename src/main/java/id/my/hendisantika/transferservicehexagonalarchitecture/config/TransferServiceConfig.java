@@ -1,9 +1,20 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.config;
 
+import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.PostgresCustomerRepository;
+import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.PostgresDepositRepository;
+import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.datajdbc.BaseDataJdbc;
+import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.datajdbc.CustomerDataJdbc;
+import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.datajdbc.DepositDataJdbc;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.CustomerService;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.DefaultDepositService;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.CustomerRepository;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositRepository;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**

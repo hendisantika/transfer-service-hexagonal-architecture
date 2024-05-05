@@ -1,5 +1,8 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.core;
 
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.model.Deposit;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositRepository;
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,4 +22,10 @@ public class DefaultDepositService implements DepositService {
 
     private final DepositRepository depositRepository;
     private final CustomerService customerService;
+
+    @Override
+    public Deposit add(Deposit deposit) {
+        customerService.validateCustomer(deposit.customerId());
+        return depositRepository.save(deposit);
+    }
 }
