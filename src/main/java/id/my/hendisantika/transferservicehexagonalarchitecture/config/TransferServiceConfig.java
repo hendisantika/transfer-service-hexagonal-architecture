@@ -27,4 +27,9 @@ public class TransferServiceConfig {
     public DepositService depositService(DepositRepository depositTransferRepository, CustomerService endUserService) {
         return new DefaultDepositService(depositTransferRepository, endUserService);
     }
+
+    @Bean
+    public CustomerService customerService(CustomerRepository endUserRepository) {
+        return new CustomerService(endUserRepository);
+    }
 }
