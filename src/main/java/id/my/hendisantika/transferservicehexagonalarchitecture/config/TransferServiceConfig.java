@@ -32,4 +32,10 @@ public class TransferServiceConfig {
     public CustomerService customerService(CustomerRepository endUserRepository) {
         return new CustomerService(endUserRepository);
     }
+
+    // Repository Beans
+    @Bean
+    DepositRepository depositTransferRepository(DepositDataJdbc depositTransferDataJdbc) {
+        return new PostgresDepositRepository(depositTransferDataJdbc);
+    }
 }
