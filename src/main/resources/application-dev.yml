@@ -1,0 +1,6 @@
+server:
+  shutdown: immediate
+
+logging.level:
+  id.my.hendisantika.transferservicehexagonalarchitecture: debug
+  org.springframework.jdbc.core: TRACE
