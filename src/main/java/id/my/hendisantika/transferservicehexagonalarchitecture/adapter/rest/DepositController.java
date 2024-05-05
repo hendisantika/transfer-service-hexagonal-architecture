@@ -3,7 +3,6 @@ package id.my.hendisantika.transferservicehexagonalarchitecture.adapter.rest;
 import id.my.hendisantika.transferservicehexagonalarchitecture.adapter.rest.dto.DepositDto;
 import id.my.hendisantika.transferservicehexagonalarchitecture.core.port.DepositService;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -27,7 +26,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/v1/transfer-service", produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class DepositController {
 
     private final DepositService depositService;
