@@ -1,5 +1,6 @@
 package id.my.hendisantika.transferservicehexagonalarchitecture.adapter.db.datajdbc;
 
+import id.my.hendisantika.transferservicehexagonalarchitecture.core.model.Deposit;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -12,5 +13,5 @@ import org.springframework.data.repository.CrudRepository;
  * Time: 10:18
  * To change this template use File | Settings | File Templates.
  */
-public interface DepositDataJdbc extends BaseDataJdbc, CrudRepository<DepositEntity, Long> {
+public interface DepositDataJdbc extends BaseDataJdbc, CrudRepository<Deposit, Long> {
 }
